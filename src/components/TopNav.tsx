@@ -4,7 +4,7 @@ import { AiOutlinePoweroff } from "react-icons/ai";
 
 const TopNav = () => {
     return (
-        <menu className="flex flex-wrap gap-10 items-center justify-between py-[2rem] px-[0]">
+        <menu className="flex flex-wrap gap-10 items-center justify-between border border-gray-400 px-14 py-7 mb-32">
             <div className="flex items-center gap-5">
                 <RiMenu4Fill className="cursor-pointer" size={35} color="#10609F" />
                 <h1 className="text-primary2 text-baseTwo font-semibold uppercase">

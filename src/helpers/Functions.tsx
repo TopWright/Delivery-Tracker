@@ -25,7 +25,7 @@ export const RemoveFromStorage = (key: string): void => {
 export const Loader = ({ white }: { white: boolean }) => {
   return (
     <div className="flex justify-center" style={{ width: "100%" }}>
-      <span className={`btn-loader ${white ? "white" : ""}`}></span>
+      <span className={`loader ${white ? "white" : ""}`}></span>
     </div>
   );
 };

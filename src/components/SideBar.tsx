@@ -30,8 +30,8 @@ const SideBar: React.FC<SideBarProps> = ({ toggled, setToggle, setBroken, broken
             toggled={toggled}
             onBreakPoint={setBroken}
         >
-            <div className="px-16 mt-10 header">
-                <div className="flex justify-between">
+            <div className="px-16 my-14 header">
+                <div className="flex justify-center items-center ">
                     <div className="mb-20 img">
                         <img src={Logo} alt="Logo" />
                     </div>
@@ -39,8 +39,8 @@ const SideBar: React.FC<SideBarProps> = ({ toggled, setToggle, setBroken, broken
                         <IoMdArrowRoundBack size={25} className="mt-12 cursor-pointer" onClick={() => setToggle(!toggled)} />
                     )}
                 </div>
-                <div className="text">
-                    <p className="text-2xl text-[#d7d6d6] font-semibold">MANAGEMENT</p>
+                <div className="text bg-neutral-300 py-5 px-10 rounded-lg">
+                    <p className="text-2xl text-gray-500 font-semibold">Delivery Tracker </p>
                 </div>
             </div>
             <Menu
@@ -48,21 +48,21 @@ const SideBar: React.FC<SideBarProps> = ({ toggled, setToggle, setBroken, broken
                     root: ({ active }) => {
                         return {
                             color: active ? "#0059AC" : "#333",
-                            backgroundColor: active ? "#E6EEF7" : undefined,
-                            marginBottom: 7,
+                            backgroundColor: active ? "6a728250" : undefined,
+                            marginBottom: 30,
                             borderRadius: 10,
                         };
                     },
                     button: {
-                        paddingInline: 10,
+                        paddingInline: 15,
                         borderRadius: 10,
                         "&:hover": {
-                            backgroundColor: "#E6EEF7",
+                            backgroundColor: "#6a728250",
                             color: "#0059AC",
                         },
                     },
                     icon: {
-                        marginRight: 10,
+                        marginRight: 15,
                     },
                     label: {
                         fontSize: "1.5rem",
