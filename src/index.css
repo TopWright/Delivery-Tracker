@@ -1,1 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&display=swap");
+
 @import "tailwindcss";
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  color: #80000065;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #88888886;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #5555557a;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Nunito Sans", Helvetica, sans-serif;
+}
+
+input,
+input:active,
+input:focus,
+button,
+select,
+textarea {
+  outline: none;
+  border-radius: none;
+  background-color: transparent;
+}
+
+img {
+  width: 100%;
+}
+
+.main {
+  max-height: 100vh;
+  min-height: 100vh;
+  padding-bottom: 10rem;
+  flex: 1;
+  width: calc(100% - 250px);
+  background-color: #eeeeee75;
+  overflow-y: scroll;
+}
+
+@media only screen and (max-width: 769px) {
+  .main {
+    min-height: 100vh;
+    flex: 1;
+    width: 100%;
+  }
+}
+
+#nprogress .bar {
+  background: var(--color-primary) !important;
+  height: 7px;
+}
+
+#nprogress .spinner {
+  display: none;
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  padding: 0px;
+  border-radius: 100%;
+  border: 3px solid;
+  border-top-color: rgba(0, 97, 225, 0.65);
+  border-bottom-color: rgba(44, 42, 42, 0.144);
+  border-left-color: rgba(0, 97, 225, 0.65);
+  border-right-color: rgba(44, 42, 42, 0.144);
+  -webkit-animation: loader 0.8s linear infinite;
+  animation: loader 0.8s linear infinite;
+}
+
+.loader.white {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  padding: 0px;
+  border-radius: 100%;
+  border: 3px solid;
+  border-top-color: rgba(225, 255, 255, 1);
+  border-bottom-color: rgba(225, 255, 255, 0.15);
+  border-left-color: rgba(225, 255, 255, 1);
+  border-right-color: rgba(225, 255, 255, 0.15);
+  -webkit-animation: loader 0.8s linear infinite;
+  animation: loader 0.8s linear infinite;
+}
