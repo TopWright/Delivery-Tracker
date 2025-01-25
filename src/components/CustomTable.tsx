@@ -1,10 +1,10 @@
-/* eslint-disable react/prop-types */
-import DataTable, { TableColumn } from "react-data-table-component";
+import DataTable from "react-data-table-component";
 import { Loader } from "../helpers/Functions";
 
+// Define the Shipment type
 interface CustomDataTableProps {
-    column: TableColumn<any>[];
-    data: [];
+    column: any[];
+    data: any[];
     [key: string]: any;
 }
 
@@ -16,31 +16,25 @@ const CustomDataTable = ({ column, data, ...restProps }: CustomDataTableProps) =
                 color: '#052137',
                 fontSize: '1.5rem',
                 fontWeight: "400",
-                border: 'none'
-                // override the row height
+                border: 'solid 1px #33415530',
             },
         },
         headCells: {
             style: {
                 fontSize: "1.6rem",
                 fontWeight: "700",
-                backgroundColor: "#e2e8f070",
+                backgroundColor: "#e2e8f090",
                 color: '#10609F',
                 padding: '2rem 3rem',
-                borderBottom: 'solid 1px #33415530',
+                borderBottom: 'solid 1px #33415540',
             },
         },
         cells: {
             style: {
                 padding: '2rem 3rem',
-                color: '#052137'
+                color: '#052137',
             },
         },
-        // responsiveWrapper: {
-        // 	style: {
-        // 		paddingBottom: "170px",
-        // 	},
-        // },
     };
 
     return (
@@ -51,7 +45,7 @@ const CustomDataTable = ({ column, data, ...restProps }: CustomDataTableProps) =
                 customStyles={customStyles}
                 className="overflow-x-auto shadow-lg pt-0"
                 paginationRowsPerPageOptions={[5, 10, 15, 20, 25, 30]}
-                progressComponent={<Loader white={false} />}
+                progressComponent={<Loader className="my-20" white={false} />}
                 {...restProps}
             />
         </div>

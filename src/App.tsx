@@ -8,13 +8,12 @@ import { ProgressBar } from "./helpers/Functions";
 function App() {
   const router = createBrowserRouter([
     {
-      path: "/auth",
+      path: "/",
       element: <AuthLayout />,
       errorElement: <ErrorPage />,
       children: [
         {
           index: true,
-          path: "login",
           element: <Login />,
         },
       ],

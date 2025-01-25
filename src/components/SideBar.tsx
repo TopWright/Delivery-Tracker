@@ -25,7 +25,6 @@ const SideBar: React.FC<SideBarProps> = ({ toggled, setToggle, setBroken, broken
             backgroundColor="white"
             customBreakPoint="900px"
             width="270px"
-            padding="20px"
             className="overflow-y-auto"
             toggled={toggled}
             onBreakPoint={setBroken}
