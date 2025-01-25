@@ -91,7 +91,7 @@ const Tracking: React.FC = () => {
   useEffect(() => {
     if (!track) return;
 
-    let ws = new WebSocket('ws://localhost:5173');
+    let ws = new WebSocket('wss://localhost:5173');
 
     ws.onopen = () => {
       console.log('WebSocket connected');
